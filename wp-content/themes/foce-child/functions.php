@@ -6,7 +6,13 @@ function theme_enqueue_styles() {
         // Chargement du theme.css du thème enfant
     wp_enqueue_style( 'theme', get_stylesheet_directory_uri() . '/css/theme.css');
         // Chargement du script.js du thème enfant
-    wp_enqueue_script( 'script', get_stylesheet_directory_uri() . '/js/script.js', array(), null, true);
+    wp_enqueue_script( 'foce-child-script', get_stylesheet_directory_uri() . '/js/script.js', array(), null, true);
+        // Chargement du script pour skrollr
+    wp_enqueue_script( 'foce-child-skrollr', $src='https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js', array(), null, true);
+        // Chargement du script pour swipper 
+    wp_enqueue_script( 'foce-child-swiper', $src='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), null, false);
+        // Chargement du css de Swiper
+    wp_enqueue_style( 'foce-child-swipercss', $src='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
 }
 
 // Get customizer options form parent theme
@@ -19,4 +25,3 @@ if ( get_stylesheet() !== get_template() ) {
         return get_option( 'theme_mods_' . get_template(), $default );
     } );
 }
-

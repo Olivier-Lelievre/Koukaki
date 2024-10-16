@@ -1,200 +1,210 @@
+@charset "UTF-8";
 /* ANIMATION Fade In SECTIONS */
-
-@keyframes apparitionFadeIn{
-    0% {
-        opacity: 0;
-        translate: 0 200px;
-    }
-    100% {
-        opacity: 1;
-        translate:0;
-    }
+@keyframes apparitionFadeIn {
+  0% {
+    opacity: 0;
+    translate: 0 200px;
+  }
+  100% {
+    opacity: 1;
+    translate: 0;
+  }
 }
-
 #story {
-    animation: apparitionFadeIn 1s 250ms backwards;
+  animation: apparitionFadeIn 1s 250ms backwards;
 }
+
 #studio {
-    animation: apparitionFadeIn 1s 500ms backwards;
+  animation: apparitionFadeIn 1s 500ms backwards;
 }
+
 #oscars {
-    animation: apparitionFadeIn 1s 750ms backwards;
+  animation: apparitionFadeIn 1s 750ms backwards;
 }
+
 #colophon {
-    animation: apparitionFadeIn 1s 1000ms backwards;
+  animation: apparitionFadeIn 1s 1000ms backwards;
 }
 
 /* ANIMATION Rotation FLEURS */
-
-@keyframes flowersRotate{
-    from {
-        rotate: 0deg;
-    }
-    to {
-        rotate: 360deg;
-    }
+@keyframes flowersRotate {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
 }
-
 #oscars::before, #oscars::after, .story__article::after, #story h2::after, .rotateFlowers::before, .rotateFlowers::after, .site-footer ul::after {
-    animation: flowersRotate 16s linear infinite;
-    /*line-height: 0;*/
+  animation: flowersRotate 16s linear infinite;
+  /*line-height: 0;*/
 }
 
 /* début ANIMATION TITRES H2 */
-
-@keyframes apparition{
-    0% {
-        translate: 0 100%;
-    }
-    100% {
-        translate:0;
-    }
+@keyframes apparition {
+  0% {
+    translate: 0 100%;
+  }
+  100% {
+    translate: 0;
+  }
 }
-
 h2 .title {
-    display: inline-block;
-
+  display: inline-block;
 }
-
 
 /* Mettre une mixin ici : */
 #studio h2 {
-    overflow: hidden;
-    padding-bottom: 0;
-    padding-top: 0;
-    margin-top: 65px;
-    margin-bottom: 65px;
+  overflow: hidden;
+  padding-bottom: 0;
+  padding-top: 0;
+  margin-top: 65px;
+  margin-bottom: 65px;
 }
+
 #story h2 {
-    overflow: hidden;
-    padding-bottom: 0;
-    padding-top: 0;
-    margin-top: 65px;
-    margin-bottom: 65px;
+  overflow: hidden;
+  padding-bottom: 0;
+  padding-top: 0;
+  margin-top: 65px;
+  margin-bottom: 65px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-    .animation-titles {
-        animation: apparition 500ms backwards;
-    }
-    .delay-1 {
-        animation-delay: 500ms; /* Délai de 0.5 seconde */
-    }
-    .delay-2 {
-        animation-delay: 1s; /* Délai de 1 seconde */
-    }
-}
-
-/* fin ANIMATION TITRES H2 */
-
-/* début HERO */
-
-@keyframes mouvementBannerImg {
-    0% {
-        translate: 0px 0px;
-        rotate: -1deg;
-    }
-    12% {
-        translate: 0px 15px;
-    }
-    25% {
-        translate: 0px 20px;
-        rotate: 1deg;
-    }
-    35% {
-        translate: 4px 20px;
-
-    }
-    50% {
-        translate: 10px 28px;
-        rotate: -1deg;
-    }
-    65% {
-        translate: 20px 10px;
-        rotate: 1deg;
-    }
-    85% {
-        translate: 14px 8px;
-    }
-    100% {
-        translate: 0px 0px;
-        rotate: -1deg;
-    }
-
-}
-
-#background-video {
-    position: absolute;
-    z-index: 0;
+  .animation-titles {
+    animation: apparition 500ms backwards;
   }
+  .delay-1 {
+    animation-delay: 500ms; /* Délai de 0.5 seconde */
+  }
+  .delay-2 {
+    animation-delay: 1s; /* Délai de 1 seconde */
+  }
+}
+/* fin ANIMATION TITRES H2 */
+/* début HERO */
+@keyframes mouvementBannerImg {
+  0% {
+    translate: 0px 0px;
+    rotate: -1deg;
+  }
+  12% {
+    translate: 0px 15px;
+  }
+  25% {
+    translate: 0px 20px;
+    rotate: 1deg;
+  }
+  35% {
+    translate: 4px 20px;
+  }
+  50% {
+    translate: 10px 28px;
+    rotate: -1deg;
+  }
+  65% {
+    translate: 20px 10px;
+    rotate: 1deg;
+  }
+  85% {
+    translate: 14px 8px;
+  }
+  100% {
+    translate: 0px 0px;
+    rotate: -1deg;
+  }
+}
+#background-video {
+  position: absolute;
+  z-index: 0;
+}
 
 .banner img {
-    z-index: 1;
-    position: fixed;
-    width: 680px;
-    animation: mouvementBannerImg 3s linear infinite;
+  z-index: 1;
+  position: fixed;
+  width: 680px;
+  animation: mouvementBannerImg 3s linear infinite;
 }
 
-@media only screen and ( max-width : 640px ) {
-    #background-video {
-            display : none;
-    }
+@media only screen and (max-width: 640px) {
+  #background-video {
+    display: none;
+  }
 }
-
 /* fin HERO */
+/* début SECTION CHARACTERS */
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
 
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
 
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+/* fin SECTION CHARACTERS */
+/* début SECTION OSCARS */
 #oscars {
-    position: relative;
-    margin-top: 150px;
-    margin-bottom: 35px;
+  position: relative;
+  margin-top: 150px;
+  margin-bottom: 35px;
 }
 
 #oscars .container {
-    display: flex;
-    margin: auto;
-    justify-content: flex-start;
-    width: 75%;
+  display: flex;
+  margin: auto;
+  justify-content: flex-start;
+  width: 75%;
 }
 
 #oscars::before {
-    content: url('../images/Sunflower.png');
-    position: absolute;
-    top: -8em;
-    left:  10em;
+  content: url("../images/Sunflower.png");
+  position: absolute;
+  top: -8em;
+  left: 10em;
 }
 
 #oscars::after {
-    content: url('../images/orchid.png');
-    position: absolute;
-    top: -15em;
-    right: -5em;
+  content: url("../images/orchid.png");
+  position: absolute;
+  top: -15em;
+  right: -5em;
 }
 
 #oscars h3 {
-    background-image: url("../images/orange_oscars_bg.png");
-    padding: 64px;
-    text-align: left;
-    line-height: normal;
+  background-image: url("../images/orange_oscars_bg.png");
+  padding: 64px;
+  text-align: left;
+  line-height: normal;
 }
 
 #oscars .logoOscars {
-    width: 278px;
-    height: 129px;
-    margin-top: 64px;
+  width: 278px;
+  height: 129px;
+  margin-top: 64px;
 }
 
 .site-footer::before {
-    content: none;
+  content: none;
 }
 
 .site-footer::after {
-    content: none;
+  content: none;
 }
 
 @media (max-width: 920px) {
-    #oscars .container {
-        flex-direction: column;
-        align-items: center;
-    }
+  #oscars .container {
+    flex-direction: column;
+    align-items: center;
+  }
 }
+/* fin SECTION OSCARS *//*# sourceMappingURL=theme.css.map */
