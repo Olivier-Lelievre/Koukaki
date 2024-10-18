@@ -2,12 +2,11 @@
 
 get_header();
 ?>
-
     <main id="primary" class="site-main">
         <section class="banner">
             <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants" data-0="" data-250="transform:translate3d(0, 0px, 0)" data-900="transform:translate3d(0, -650px, 0)">
             <video id="background-video" autoplay loop muted>
-                <source src="wp-content/themes/foce-child/images/Studio+Koukaki-vidéo+header+sans+son+(1).mp4" type="video/mp4">
+                <source src="<?php echo get_theme_file_uri() . '/images/Studio+Koukaki-vidéo+header+sans+son+(1).mp4'; ?>" type="video/mp4">
             </video>
         </section>
 
@@ -32,8 +31,12 @@ get_header();
                 </div>
             </article>
             <article id="place">
-                <div>
+                <div >
                     <h3>Le Lieu</h3>
+                    <div class="clouds" >
+                        <img data-anchor-target="#place" src="<?php echo get_theme_file_uri() . '/images/big_cloud.png'; ?>" alt="grand nuage"  data-top-bottom="transform:translate3d(650px, -200px, 0)" data-bottom-top="transform:translate3d(950px, -200px, 0)"/>
+                        <img data-anchor-target="#place" src="<?php echo get_theme_file_uri() . '/images/little_cloud.png'; ?>" alt="petit nuage"  data-top-bottom="transform:translate3d(200px, -120px, 0)" data-bottom-top="transform:translate3d(500px, -120px, 0)"/>
+                    </div>
                     <p><?php echo get_theme_mod('place'); ?></p>
                 </div>
 
@@ -48,17 +51,9 @@ get_header();
         </section>
         <?php get_template_part( 'parts/nominationOscars' ); ?>
     </main><!-- #main -->
-
 <?php
 get_footer();
 ?>
-
-<div>
-    <script type="text/javascript">
+<script type="text/javascript">
     var s = skrollr.init();
-    </script>
-</div>
-
-<div>
-
-</div>
+</script>

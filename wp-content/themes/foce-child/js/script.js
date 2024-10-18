@@ -1,3 +1,4 @@
+
 // ANIMATION TITRES H2
 
   const observer = new IntersectionObserver(entries => {
@@ -25,7 +26,7 @@
   // Observer tous les éléments .title
   titles.forEach((element) => observer.observe(element));
   
-
+ 
 
 
   // SWIPER

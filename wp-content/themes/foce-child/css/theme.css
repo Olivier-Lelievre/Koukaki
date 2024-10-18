@@ -1,4 +1,5 @@
-@charset "UTF-8";
+
+
 /* ANIMATION Fade In SECTIONS */
 @keyframes apparitionFadeIn {
   0% {
@@ -37,7 +38,7 @@
 }
 #oscars::before, #oscars::after, .story__article::after, #story h2::after, .rotateFlowers::before, .rotateFlowers::after, .site-footer ul::after {
   animation: flowersRotate 16s linear infinite;
-  /*line-height: 0;*/
+  line-height: 0;
 }
 
 /* début ANIMATION TITRES H2 */
@@ -132,6 +133,7 @@ h2 .title {
   }
 }
 /* fin HERO */
+
 /* début SECTION CHARACTERS */
 .swiper {
   width: 100%;
@@ -152,6 +154,19 @@ h2 .title {
 }
 
 /* fin SECTION CHARACTERS */
+
+/* début NUAGES */
+#place .clouds {
+  position: absolute;
+  filter: blur(1em);
+}
+
+.story #place {
+	background-image: url("../images/Studio_Koukaki-image_place.png");
+}
+
+/* fin NUAGES */
+
 /* début SECTION OSCARS */
 #oscars {
   position: relative;
@@ -207,4 +222,4 @@ h2 .title {
     align-items: center;
   }
 }
-/* fin SECTION OSCARS *//*# sourceMappingURL=theme.css.map */
+/* fin SECTION OSCARS */
