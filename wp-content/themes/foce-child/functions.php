@@ -1,18 +1,24 @@
 <?php
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 function theme_enqueue_styles() {
-        // Chargement du style.css du thème parent
+    // Chargement du style.css du thème parent
     wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
-        // Chargement du theme.css du thème enfant
-    wp_enqueue_style( 'theme', get_stylesheet_directory_uri() . '/css/theme.css');
-        // Chargement du script.js du thème enfant
+    // Chargement du script.js du thème enfant
     wp_enqueue_script( 'foce-child-script', get_stylesheet_directory_uri() . '/js/script.js', array(), null, true);
-        // Chargement du script pour skrollr
-    wp_enqueue_script( 'foce-child-skrollr', $src='https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js', array(), null, true);
-        // Chargement du script pour swipper 
-    wp_enqueue_script( 'foce-child-swiper', $src='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), null, false);
-        // Chargement du css de Swiper
+    // Chargement du swiper.js
+    wp_enqueue_script( 'foce-child-swiper-script', get_stylesheet_directory_uri() . '/js/swiper.js', array(), null, true);
+    // Chargement du skrollr.js
+    wp_enqueue_script( 'foce-child-skrollr-script', get_stylesheet_directory_uri() . '/js/skrollr.js', array(), null, true);
+    // Chargement du css de Swiper
     wp_enqueue_style( 'foce-child-swipercss', $src='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
+    // Chargement du script pour swipper 
+    wp_enqueue_script( 'foce-child-swiperjs', $src='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), null, false);
+    // Chargement du theme.css du thème enfant
+    wp_enqueue_style( 'theme', get_stylesheet_directory_uri() . '/css/theme.css');
+    // Chargement du oscars.css du thème enfant
+    wp_enqueue_style( 'oscars', get_stylesheet_directory_uri() . '/css/oscars.css');
+    // Chargement du script pour skrollr
+    wp_enqueue_script( 'foce-child-skrollr', $src='https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js', array(), null, false);
 }
 
 // Get customizer options form parent theme

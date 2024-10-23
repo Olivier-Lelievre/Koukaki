@@ -34,8 +34,8 @@ get_header();
                 <div >
                     <h3>Le Lieu</h3>
                     <div class="clouds" >
-                        <img data-anchor-target="#place" src="<?php echo get_theme_file_uri() . '/images/big_cloud.png'; ?>" alt="grand nuage"  data-top-bottom="transform:translate3d(650px, -200px, 0)" data-bottom-top="transform:translate3d(950px, -200px, 0)"/>
-                        <img data-anchor-target="#place" src="<?php echo get_theme_file_uri() . '/images/little_cloud.png'; ?>" alt="petit nuage"  data-top-bottom="transform:translate3d(200px, -120px, 0)" data-bottom-top="transform:translate3d(500px, -120px, 0)"/>
+                        <img class="clouds-big" src="<?php echo get_theme_file_uri() . '/images/big_cloud.png'; ?>" alt="grand nuage"/>
+                        <img class="clouds-little" src="<?php echo get_theme_file_uri() . '/images/little_cloud.png'; ?>" alt="petit nuage"/>
                     </div>
                     <p><?php echo get_theme_mod('place'); ?></p>
                 </div>
@@ -51,9 +51,6 @@ get_header();
         </section>
         <?php get_template_part( 'parts/nominationOscars' ); ?>
     </main><!-- #main -->
+    
 <?php
 get_footer();
-?>
-<script type="text/javascript">
-    var s = skrollr.init();
-</script>

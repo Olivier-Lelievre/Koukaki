@@ -1,3 +1,33 @@
+.main-navigation {
+  display: flex;
+}
+
+.main-navigation ul {
+  margin: auto;
+}
+
+.nav-menu button {
+  position: absolute;
+  left: 85%;
+}
+
+.burger-open {
+  visibility: hidden;
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  height: 100vh;
+  background: #FFF5E9;
+}
+
+.active {
+    visibility:visible;
+}
+
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: flex;
+}
 
 
 /* ANIMATION Fade In SECTIONS */
@@ -83,6 +113,7 @@ h2 .title {
   }
 }
 /* fin ANIMATION TITRES H2 */
+
 /* début HERO */
 @keyframes mouvementBannerImg {
   0% {
@@ -115,8 +146,17 @@ h2 .title {
     rotate: -1deg;
   }
 }
+
+
+.banner {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+}
+
 #background-video {
-  position: absolute;
+  position: relative;
+  height: 100%;
   z-index: 0;
 }
 
@@ -131,26 +171,26 @@ h2 .title {
   #background-video {
     display: none;
   }
+  .banner {
+    min-height: 0;
+    height: 425px;
+  }
+  .banner .logo {
+    top: 185px;
+    left: 110px;
+    animation: none;
+  }
 }
+
+
 /* fin HERO */
 
 /* début SECTION CHARACTERS */
-.swiper {
-  width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
 
 .swiper-slide {
   background-position: center;
   background-size: cover;
-  width: 300px;
-  height: 300px;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
+  width: 440px;
 }
 
 /* fin SECTION CHARACTERS */
@@ -158,7 +198,25 @@ h2 .title {
 /* début NUAGES */
 #place .clouds {
   position: absolute;
+}
+
+
+/* MIXIN ?? */
+
+.clouds .clouds-little {
+  position: relative;
+  top: -100px;
+  left: 600px;
   filter: blur(1em);
+  z-index: 1;
+}
+
+.clouds .clouds-big {
+  position: relative;
+  top: -200px;
+  left: 1100px;
+  filter: blur(1em);
+  z-index: 1;
 }
 
 .story #place {
@@ -166,60 +224,3 @@ h2 .title {
 }
 
 /* fin NUAGES */
-
-/* début SECTION OSCARS */
-#oscars {
-  position: relative;
-  margin-top: 150px;
-  margin-bottom: 35px;
-}
-
-#oscars .container {
-  display: flex;
-  margin: auto;
-  justify-content: flex-start;
-  width: 75%;
-}
-
-#oscars::before {
-  content: url("../images/Sunflower.png");
-  position: absolute;
-  top: -8em;
-  left: 10em;
-}
-
-#oscars::after {
-  content: url("../images/orchid.png");
-  position: absolute;
-  top: -15em;
-  right: -5em;
-}
-
-#oscars h3 {
-  background-image: url("../images/orange_oscars_bg.png");
-  padding: 64px;
-  text-align: left;
-  line-height: normal;
-}
-
-#oscars .logoOscars {
-  width: 278px;
-  height: 129px;
-  margin-top: 64px;
-}
-
-.site-footer::before {
-  content: none;
-}
-
-.site-footer::after {
-  content: none;
-}
-
-@media (max-width: 920px) {
-  #oscars .container {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-/* fin SECTION OSCARS */
