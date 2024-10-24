@@ -37,11 +37,16 @@
             </ul>
 		</nav><!-- #site-navigation -->
         <div class="burger-open">
+            <img class="link-burger" src="<?php echo get_theme_file_uri() . '/images/logoBurger.png'; ?> " alt="logo Fleurs d'oranger & chats errants"/>
             <ul>
                 <li><a class="link-burger" href="#story">Histoire</a></li>
                 <li><a class="link-burger" href="#characters">Personnages</a></li>
                 <li><a class="link-burger" href="#place">Lieu</a></li>
                 <li><a class="link-burger" href="#studio">Studio Koukaki</a></li>
             </ul>
+            <p>STUDIO KOUKAKI</p>
+            <div>
+                <?php get_template_part( 'parts/animationsBurger' ); ?>
+            </div>
         </div>
 	</header><!-- #masthead -->

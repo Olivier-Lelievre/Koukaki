@@ -1,13 +1,15 @@
 // BURGER
-const burger = document.querySelector('#site-navigation ul button');
 const menu = document.querySelector('.burger-open');
+const burger = document.querySelector('#site-navigation ul button');
 
 burger.addEventListener('click', () => {
   menu.classList.toggle('active');
+  burger.classList.toggle('crossBurger')
 });
 
 document.querySelectorAll(".link-burger").forEach(n => n.addEventListener("click", () => {
   menu.classList.remove("active");
+  burger.classList.remove('crossBurger')
 }));
 
 
