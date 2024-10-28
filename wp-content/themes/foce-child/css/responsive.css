@@ -1,0 +1,25 @@
+/* HERO */
+
+@media only screen and (max-width: 640px) {
+    #background-video {
+      display: none;
+    }
+    .banner {
+      min-height: 0;
+      height: 425px;
+    }
+    .banner .logo {
+      top: 185px;
+      left: 110px;
+      animation: none;
+    }
+  }
+
+/* OSCARS */
+
+@media (max-width: 920px) {
+  #oscars .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}

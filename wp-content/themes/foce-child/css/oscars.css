@@ -1,4 +1,4 @@
-#oscars {
+  #oscars {
     position: relative;
     margin-top: 150px;
     margin-bottom: 35px;
@@ -25,13 +25,22 @@
     right: -5em;
   }
   
-  #oscars h3 {
-    background-image: url("../images/orange_oscars_bg.png");
-    padding: 64px;
+  #oscars div div {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  #oscars div h3 {
+    position: absolute;
+    z-index: 2;
     text-align: left;
     line-height: normal;
   }
-  
+  #oscars div img {
+    position: relative;
+    z-index: 1;
+  }
+
   #oscars .logoOscars {
     width: 278px;
     height: 129px;
@@ -44,11 +53,4 @@
   
   .site-footer::after {
     content: none;
-  }
-  
-  @media (max-width: 920px) {
-    #oscars .container {
-      flex-direction: column;
-      align-items: center;
-    }
   }
