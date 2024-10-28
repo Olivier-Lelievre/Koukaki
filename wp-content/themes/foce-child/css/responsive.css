@@ -1,6 +1,6 @@
 /* HERO */
 
-@media only screen and (max-width: 640px) {
+@media screen and (max-width: 640px) {
     #background-video {
       display: none;
     }
@@ -17,9 +17,76 @@
 
 /* OSCARS */
 
-@media (max-width: 920px) {
+@media screen and (max-width: 920px) {
   #oscars .container {
     flex-direction: column;
     align-items: center;
+  }
+  li .link-burger {
+    font-size: 0.5em;
+  }
+  .burger-open ul li {
+    line-height: 95%;
+  }
+}
+
+
+@media screen and (max-width: 700px) {
+	.menu-toggle {
+		display: flex;
+	}
+  .main-navigation {
+		height: 80px;
+	}
+	.main-navigation ul {
+		display: flex;
+		margin: 0;
+		padding-left: 0;
+	}
+  .main-navigation ul li a {
+		margin-left: 1em;
+    font-size: 0.65em;
+	}
+	.main-navigation ul .site-title {
+		display: block;
+	}
+
+  .banner img {
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+
+  li .link-burger {
+    font-size: 0.3em;
+  }
+  .burger-open ul li {
+    line-height: 65%;
+  }
+  .burger-open p {
+    margin-top: 100px;
+    font-size: 0.7em;
+  }
+
+  .orchidFlower {
+    width: 25%;
+  }
+  .littleKawaneko {
+    width: 15%;
+    left: 12%;
+    top: 30%;
+  }
+
+  .swiper  {
+    width: 65%;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  #studio h2 {
+    background-size: 250px !important;
   }
 }

@@ -1,61 +1,56 @@
-#oscars {
+  #oscars {
     position: relative;
     margin-top: 150px;
     margin-bottom: 35px;
   }
   
-#oscars .container {
+  #oscars .container {
     display: flex;
     margin: auto;
     justify-content: flex-start;
     width: 75%;
   }
   
-#oscars::before {
+  #oscars::before {
     content: url("../images/Sunflower.png");
     position: absolute;
     top: -8em;
     left: 10em;
   }
   
-#oscars::after {
+  #oscars::after {
     content: url("../images/orchid.png");
     position: absolute;
     top: -15em;
     right: -5em;
   }
   
-#oscars div div {
+  #oscars div div {
     position: relative;
     display: flex;
     align-items: center;
   }
-
-#oscars div h3 {
+  #oscars div h3 {
     position: absolute;
     z-index: 2;
     text-align: left;
     line-height: normal;
   }
-
-#oscars .container div {
-    height: 400px;
-  }
-  
-#oscars .container div img {
-    height: inherit;
+  #oscars div img {
+    position: relative;
+    z-index: 1;
   }
 
-#oscars .logoOscars {
-    width: 279px;
+  #oscars .logoOscars {
+    width: 278px;
     height: 129px;
     margin-top: 64px;
   }
   
-.site-footer::before {
+  .site-footer::before {
     content: none;
   }
   
-.site-footer::after {
+  .site-footer::after {
     content: none;
   }
