@@ -1,150 +1,145 @@
 /* button BURGER */
 .crossBurger span:nth-child(1) {
-    transform: rotate(45deg) translate(2.5px, 5px);
-  }
-  
-  .crossBurger span:nth-child(2) {
-    opacity: 0;
-  }
-  
-  .crossBurger span:nth-child(3) {
-    transform: rotate(-45deg) translate(2.5px, -5px);
-  }
-  
-  /* BURGER */
-  .main-navigation {
-    display: flex;
-  }
-  
-  .main-navigation ul {
-    margin: auto;
-  }
-  
-  .nav-menu button {
-    position: absolute;
-    left: 85%;
-  }
-  
-  #site-navigation {
-    position: relative;
-    z-index: 2;
-  }
-  
-  .burger-open {
-    overflow: hidden;
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    height: 100vh;
-    background: #FFF5E9;
-    translate: 0 -100%;
-    opacity: 0;
-    transition: all 300ms ease;
-  }
-  
-  .burger-open ul li {
-    list-style-type: none;
-    margin-left: -64px;
-    text-align: center;
-    line-height: 200%;
-    font-size: 64px;
-  }
-  
-  .burger-open ul li a {
-    text-decoration: none;
-  }
-  
-  .burger-open ul li a:hover {
-    color: black;
-    text-shadow: 0px 0px 14px #FF5C00
-  }
-  
-  .burger-open img {
-    display: flex; 
-    margin: auto;
-  }
-  
-  .burger-open p {
-    margin-top: 100px;
-    text-align: center;
-  }
-  
-  .open {
-    translate: 0 0%;
-    opacity: 1;
-    transition: all 300ms ease;
-  }
-  
-  .menu-toggle,
-  .main-navigation.toggled ul {
-      display: flex;
-  }
-  
-  /* animations BURGER */
+  transform: rotate(45deg) translate(2.5px, 5px);
+}
 
-  /* MIXINS ICI */
+.crossBurger span:nth-child(2) {
+  opacity: 0;
+}
 
-  .orchidFlower {
-    position: absolute;
-    z-index: -1;
-    animation: flowersRotate 16s linear infinite;
-    left: -5%;
-    top: 10%;
-  }
-  .sunFlower {
-    position: absolute;
-    z-index: -1;
-    animation: flowersRotate 16s linear infinite;
-    left: 80%;
-    top: 12%;
-  }
-  .pointsFlower {
-    position: absolute;
-    z-index: -1;
-    animation: flowersRotate 16s linear infinite;
-    width: 86px;
-    left: 15%;
-    top: 50%;
-  }
-  .randomFlower {
-    position: absolute;
-    z-index: -1;
-    animation: flowersRotate 16s linear infinite;
-    width: 92px;
-    left: 96%;
-    top: 38%;
-  }
-  .hibiscusFlower {
-    position: absolute;
-    z-index: -1;
-    animation: flowersRotate 16s linear infinite;
-    left: 76%;
-    top: 64%;
-  }
-  
-  .littleJaakuna {
-    position: absolute;
-    z-index: -1;
-    animation: mouvementBannerImg 3s linear infinite;
-    width: 123px;
-    left: 76%;
-    top: 41%;
-  }
-  
-  .littleKawaneko {
-    position: absolute;
-    z-index: -1;
-    animation: mouvementBannerImg 3s linear infinite;
-    width: 123px;
-    left: 18%;
-    top: 22%;
-  }
-  
-  .littleOnejiiro {
-    position: absolute;
-    z-index: -1;
-    animation: mouvementBannerImg 3s linear infinite;
-    width: 123px;
-    left: 6%;
-    top: 72%;
-  }
+.crossBurger span:nth-child(3) {
+  transform: rotate(-45deg) translate(2.5px, -5px);
+}
+
+/* BURGER */
+.main-navigation {
+  display: flex;
+}
+.main-navigation ul {
+  margin: auto;
+}
+
+.nav-menu button {
+  position: absolute;
+  left: 85%;
+}
+
+#site-navigation {
+  position: relative;
+  z-index: 2;
+}
+
+.burger-open {
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  background: #FFF5E9;
+  translate: 0 -100%;
+  opacity: 0;
+  transition: all 200ms ease;
+}
+.burger-open img {
+  display: flex;
+  margin: auto;
+}
+.burger-open p {
+  margin-top: 100px;
+  text-align: center;
+}
+.burger-open ul li {
+  list-style-type: none;
+  margin-left: -64px;
+  text-align: center;
+  line-height: 200%;
+  font-size: 64px;
+}
+.burger-open ul li a {
+  text-decoration: none;
+}
+.burger-open ul li a:hover {
+  color: black;
+  text-shadow: 0px 0px 14px #FF5C00;
+}
+
+.open {
+  translate: 0 0%;
+  opacity: 1;
+  transition: all 200ms ease;
+}
+
+.menu-toggle,
+.main-navigation.toggled ul {
+  display: flex;
+}
+
+/* animations BURGER */
+.orchidFlower {
+  position: absolute;
+  z-index: -1;
+  animation: flowersRotate 16s linear infinite;
+  left: -5%;
+  top: 10%;
+}
+
+.sunFlower {
+  position: absolute;
+  z-index: -1;
+  animation: flowersRotate 16s linear infinite;
+  left: 80%;
+  top: 12%;
+}
+
+.pointsFlower {
+  position: absolute;
+  z-index: -1;
+  animation: flowersRotate 16s linear infinite;
+  width: 86px;
+  left: 15%;
+  top: 50%;
+}
+
+.randomFlower {
+  position: absolute;
+  z-index: -1;
+  animation: flowersRotate 16s linear infinite;
+  width: 92px;
+  left: 96%;
+  top: 38%;
+}
+
+.hibiscusFlower {
+  position: absolute;
+  z-index: -1;
+  animation: flowersRotate 16s linear infinite;
+  left: 76%;
+  top: 64%;
+}
+
+.littleJaakuna {
+  position: absolute;
+  z-index: -1;
+  animation: mouvementBannerImg 3s linear infinite;
+  width: 123px;
+  left: 76%;
+  top: 41%;
+}
+
+.littleKawaneko {
+  position: absolute;
+  z-index: -1;
+  animation: mouvementBannerImg 3s linear infinite;
+  width: 123px;
+  left: 18%;
+  top: 22%;
+}
+
+.littleOnejiiro {
+  position: absolute;
+  z-index: -1;
+  animation: mouvementBannerImg 3s linear infinite;
+  width: 123px;
+  left: 6%;
+  top: 72%;
+}/*# sourceMappingURL=burger.css.map */

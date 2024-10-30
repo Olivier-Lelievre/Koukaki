@@ -27,6 +27,7 @@ get_header();
             ?>
             <article id="characters">
                 <div>
+                    <h3>Les personnages</h3>
                     <?php get_template_part( 'parts/characters' ); ?>
                 </div>
             </article>
@@ -34,8 +35,8 @@ get_header();
                 <div >
                     <h3>Le Lieu</h3>
                     <div class="clouds" >
-                        <img class="clouds-big" src="<?php echo get_theme_file_uri() . '/images/big_cloud.png'; ?>" alt="grand nuage"/>
-                        <img class="clouds-little" src="<?php echo get_theme_file_uri() . '/images/little_cloud.png'; ?>" alt="petit nuage"/>
+                        <img class="clouds__big" src="<?php echo get_theme_file_uri() . '/images/big_cloud.png'; ?>" alt="grand nuage"/>
+                        <img class="clouds__little" src="<?php echo get_theme_file_uri() . '/images/little_cloud.png'; ?>" alt="petit nuage"/>
                     </div>
                     <p><?php echo get_theme_mod('place'); ?></p>
                 </div>

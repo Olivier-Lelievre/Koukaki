@@ -30,8 +30,8 @@ document.querySelectorAll(".link-burger").forEach(n => n.addEventListener("click
 // NUAGES
 
 window.addEventListener('scroll', function () {
-  const bigCloud = document.querySelector('.clouds-big');
-  const littleCloud = document.querySelector('.clouds-little');
+  const bigCloud = document.querySelector('.clouds__big');
+  const littleCloud = document.querySelector('.clouds__little');
   const placeSection = document.querySelector('#place');
 
   const sectionOffsetTop = placeSection.offsetTop;

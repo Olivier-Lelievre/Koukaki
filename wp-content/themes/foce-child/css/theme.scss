@@ -1,6 +1,18 @@
 @import url(oscars.css);
+
 @import url(burger.css);
+
 @import url(responsive.css);
+
+//Variables
+$bluringClouds: blur(1em);;
+
+//Mixins
+@mixin positionClouds {
+  position: relative;
+  z-index: 1;
+}
+
 main {
   overflow: hidden;
 }
@@ -46,6 +58,7 @@ main {
   line-height: 0;
 }
 
+
 /* ANIMATION TITRES H2 */
 @keyframes apparition {
   0% {
@@ -55,6 +68,7 @@ main {
     translate: 0;
   }
 }
+
 h2 span {
   display: inline-block;
 }
@@ -74,10 +88,10 @@ h2 span {
     animation: apparition 500ms backwards;
   }
 }
+
 #studio h2 span:nth-last-child(2) {
   animation-delay: 500ms;
 }
-
 #studio h2 span:nth-last-child(1) {
   animation-delay: 1s;
 }
@@ -109,16 +123,17 @@ h2 span {
     translate: 0px 0px;
   }
 }
+
 .banner {
   position: relative;
   height: 500px;
   overflow: hidden;
-}
-.banner img {
-  z-index: 1;
-  position: fixed;
-  width: 680px;
-  animation: mouvementBannerImg 3s linear infinite;
+  img {
+    z-index: 1;
+    position: fixed;
+    width: 680px;
+    animation: mouvementBannerImg 3s linear infinite;
+  }
 }
 
 #background-video {
@@ -128,6 +143,7 @@ h2 span {
 }
 
 /* SECTION CHARACTERS */
+
 .swiper-slide {
   background-position: center;
   background-size: cover;
@@ -139,22 +155,22 @@ h2 span {
   position: absolute;
 }
 
-.clouds .clouds__little {
-  position: relative;
-  z-index: 1;
-  top: -100px;
-  left: 600px;
-  filter: blur(1em);
-}
-.clouds .clouds__big {
-  position: relative;
-  z-index: 1;
-  top: -200px;
-  left: 1100px;
-  filter: blur(1em);
+.clouds {
+  .clouds__little {
+    @include positionClouds;
+    top: -100px;
+    left: 600px;
+    filter: $bluringClouds;
+  }
+  .clouds__big {
+    @include positionClouds;
+    top: -200px;
+    left: 1100px;
+    filter: $bluringClouds;
+  }
 }
 
 /* SECTION PLACE */
 .story #place {
-  background-image: url("../images/Studio_Koukaki-image_place.png");
-}/*# sourceMappingURL=theme.css.map */
+	background-image: url("../images/Studio_Koukaki-image_place.png");
+}
