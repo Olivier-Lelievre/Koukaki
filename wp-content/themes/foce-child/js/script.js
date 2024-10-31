@@ -27,6 +27,17 @@ document.querySelectorAll(".link-burger").forEach(n => n.addEventListener("click
   const titles = document.querySelectorAll('span');
   titles.forEach((element) => observer.observe(element));
 
+// VIDEO / LOGO
+
+let parallax = document.querySelector("#logo-parallax");
+
+window.addEventListener("scroll", function () {
+  let offset = window.scrollY;
+  if ( offset < parallax.offsetParent.offsetTop + parallax.offsetTop) {
+  parallax.style.transform = "translateY(" + offset + "px)";
+  }
+});
+
 // NUAGES
 
 window.addEventListener('scroll', function () {
@@ -45,10 +56,6 @@ window.addEventListener('scroll', function () {
     }
 });
 
-// SKROLLR
-
-var s = skrollr.init();
-
 // SWIPER
 
 const swiper = new Swiper(".mySwiper", {
@@ -56,7 +63,6 @@ const swiper = new Swiper(".mySwiper", {
   grabCursor: true,
   centeredSlides: true,
   slidesPerView: "auto",
-  loopAddBlankSlides: false,
   loop: true,
   coverflowEffect: {
     rotate: 50,

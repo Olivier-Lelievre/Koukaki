@@ -4,12 +4,11 @@ get_header();
 ?>
     <main id="primary" class="site-main">
         <section class="banner">
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants" data-0="" data-100="transform:translate3d(0, 0px, 0)" data-900="transform:translate3d(0, -650px, 0)">
+            <div id="logo-parallax"><img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants"></div>
             <video id="background-video" autoplay loop muted>
                 <source src="<?php echo get_theme_file_uri() . '/images/Studio+Koukaki-vidéo+header+sans+son+(1).mp4'; ?>" type="video/mp4">
             </video>
         </section>
-
         <section id="story" class="story">
             <h2><span>L'histoire</span></h2>
             <article id="" class="story__article">
@@ -21,7 +20,6 @@ get_header();
                 'posts_per_page' => -1,
                 'meta_key'  => '_main_char_field',
                 'orderby'   => 'meta_value_num',
-
             );
             $characters_query = new WP_Query($args);
             ?>
@@ -40,7 +38,6 @@ get_header();
                     </div>
                     <p><?php echo get_theme_mod('place'); ?></p>
                 </div>
-
             </article>
         </section>
         <section id="studio">

@@ -45,6 +45,7 @@ main {
 }
 
 /* ANIMATION Rotation FLEURS */
+
 @keyframes flowersRotate {
   from {
     rotate: 0deg;
@@ -53,19 +54,26 @@ main {
     rotate: 360deg;
   }
 }
+
 #oscars::before, #oscars::after, .story__article::after, #story h2::after, #studio h2::before, #studio h2::after, .site-footer ul::after {
   animation: flowersRotate 16s linear infinite;
   line-height: 0;
 }
 
-
 /* ANIMATION TITRES H2 */
+
 @keyframes apparition {
   0% {
     translate: 0 100%;
   }
   100% {
     translate: 0;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .animation-titles {
+    animation: apparition 500ms backwards;
   }
 }
 
@@ -83,15 +91,10 @@ h2 span {
   background-size: 73%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .animation-titles {
-    animation: apparition 500ms backwards;
-  }
-}
-
 #studio h2 span:nth-last-child(2) {
   animation-delay: 500ms;
 }
+
 #studio h2 span:nth-last-child(1) {
   animation-delay: 1s;
 }
@@ -126,18 +129,25 @@ h2 span {
 
 .banner {
   position: relative;
-  height: 500px;
-  overflow: hidden;
   img {
-    z-index: 1;
-    position: fixed;
-    width: 680px;
+    position: sticky;
+    margin-top: -14%;
+    margin-left: 1%;
+    width: 51em;
     animation: mouvementBannerImg 3s linear infinite;
   }
 }
 
+#logo-parallax {
+  z-index: 1;
+  margin-bottom: 65px;
+}
+
 #background-video {
-  position: relative;
+  object-fit: fill;
+  position: absolute;
+  left: 0px;
+  top: 0px;
   height: 100%;
   z-index: 0;
 }

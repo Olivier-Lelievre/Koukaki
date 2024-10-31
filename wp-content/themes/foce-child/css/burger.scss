@@ -105,8 +105,8 @@ $burgerLinksShadows: #FF5C00;
 .pointsFlower {
   @include burgerFlowers;
   width: 86px;
-  left: 15%;
-  top: 50%;
+  left: 12%;
+  top: 55%;
 }
 .randomFlower {
   @include burgerFlowers;
@@ -124,12 +124,12 @@ $burgerLinksShadows: #FF5C00;
   @include burgerCharacters;
   width: 123px;
   left: 76%;
-  top: 41%;
+  top: 50%;
 }
 .littleKawaneko {
   @include burgerCharacters;
   width: 123px;
-  left: 18%;
+  left: 14%;
   top: 22%;
 }
 .littleOnejiiro {

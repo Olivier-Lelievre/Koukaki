@@ -11,8 +11,6 @@ function theme_enqueue_styles() {
     wp_enqueue_script( 'foce-child-swiperjs', $src='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), null, false);
     // Chargement du theme.css du thème enfant
     wp_enqueue_style( 'theme', get_stylesheet_directory_uri() . '/css/theme.css');
-    // Chargement du script pour skrollr
-    wp_enqueue_script( 'foce-child-skrollr', $src='https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js', array(), null, false);
 }
 
 // Get customizer options form parent theme
