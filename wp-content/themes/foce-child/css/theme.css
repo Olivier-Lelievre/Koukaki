@@ -1,6 +1,284 @@
-@import url(oscars.css);
-@import url(burger.css);
-@import url(responsive.css);
+#oscars {
+  position: relative;
+  margin-top: 150px;
+  margin-bottom: 35px;
+}
+#oscars .container {
+  display: flex;
+  margin: auto;
+  justify-content: flex-start;
+  width: 75%;
+}
+
+.container div {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 400px;
+}
+.container div h3 {
+  position: absolute;
+  z-index: 2;
+  text-align: left;
+  line-height: normal;
+}
+.container div img {
+  height: inherit;
+}
+
+#oscars::before {
+  content: url("../images/Sunflower.png");
+  position: absolute;
+  top: -8em;
+  left: 10em;
+}
+
+#oscars::after {
+  content: url("../images/orchid.png");
+  position: absolute;
+  top: -15em;
+  right: -5em;
+}
+
+#oscars .logoOscars {
+  width: 279px;
+  height: 129px;
+  margin-top: 64px;
+}
+
+.site-footer::before, .site-footer::after {
+  content: none;
+}
+
+/* button BURGER */
+.crossBurger span:nth-child(1) {
+  transform: rotate(45deg) translate(2.5px, 5px);
+}
+
+.crossBurger span:nth-child(2) {
+  opacity: 0;
+}
+
+.crossBurger span:nth-child(3) {
+  transform: rotate(-45deg) translate(2.5px, -5px);
+}
+
+/* BURGER */
+.main-navigation {
+  display: flex;
+}
+.main-navigation ul {
+  margin: auto;
+}
+
+.nav-menu button {
+  position: absolute;
+  left: 85%;
+}
+
+#site-navigation {
+  position: relative;
+  z-index: 2;
+}
+
+.burger-open {
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  background: #FFF5E9;
+  translate: 0 -100%;
+  opacity: 0;
+  transition: all 200ms ease;
+}
+.burger-open img {
+  display: flex;
+  margin: auto;
+}
+.burger-open p {
+  margin-top: 100px;
+  text-align: center;
+}
+.burger-open ul li {
+  list-style-type: none;
+  margin-left: -64px;
+  text-align: center;
+  line-height: 200%;
+  font-size: 64px;
+}
+.burger-open ul li a {
+  text-decoration: none;
+}
+.burger-open ul li a:hover {
+  color: black;
+  text-shadow: 0px 0px 14px #FF5C00;
+}
+
+.open {
+  translate: 0 0%;
+  opacity: 1;
+  transition: all 200ms ease;
+}
+
+.menu-toggle,
+.main-navigation.toggled ul {
+  display: flex;
+}
+
+/* animations BURGER */
+.orchidFlower {
+  position: absolute;
+  z-index: -1;
+  animation: flowersRotate 16s linear infinite;
+  left: -5%;
+  top: 10%;
+}
+
+.sunFlower {
+  position: absolute;
+  z-index: -1;
+  animation: flowersRotate 16s linear infinite;
+  left: 80%;
+  top: 12%;
+}
+
+.pointsFlower {
+  position: absolute;
+  z-index: -1;
+  animation: flowersRotate 16s linear infinite;
+  width: 86px;
+  left: 12%;
+  top: 55%;
+}
+
+.randomFlower {
+  position: absolute;
+  z-index: -1;
+  animation: flowersRotate 16s linear infinite;
+  width: 92px;
+  left: 96%;
+  top: 38%;
+}
+
+.hibiscusFlower {
+  position: absolute;
+  z-index: -1;
+  animation: flowersRotate 16s linear infinite;
+  left: 76%;
+  top: 64%;
+}
+
+.littleJaakuna {
+  position: absolute;
+  z-index: -1;
+  animation: mouvementBannerImg 3s linear infinite;
+  width: 123px;
+  left: 76%;
+  top: 50%;
+}
+
+.littleKawaneko {
+  position: absolute;
+  z-index: -1;
+  animation: mouvementBannerImg 3s linear infinite;
+  width: 123px;
+  left: 14%;
+  top: 22%;
+}
+
+.littleOnejiiro {
+  position: absolute;
+  z-index: -1;
+  animation: mouvementBannerImg 3s linear infinite;
+  width: 123px;
+  left: 6%;
+  top: 72%;
+}
+
+@media screen and (max-width: 920px) {
+  #oscars .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  li .link-burger {
+    font-size: 0.5em;
+  }
+  .burger-open ul li {
+    line-height: 95%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .menu-toggle {
+    display: flex;
+  }
+  .main-navigation {
+    height: 80px;
+  }
+  .main-navigation ul {
+    display: flex;
+    margin: 0;
+    padding-left: 0;
+  }
+  .main-navigation li a {
+    margin-left: 1em;
+    font-size: 0.65em;
+  }
+  .main-navigation ul .site-title {
+    display: block;
+  }
+  .banner img {
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+  li .link-burger {
+    font-size: 0.3em;
+  }
+  .burger-open ul li {
+    line-height: 65%;
+  }
+  .burger-open p {
+    margin-top: 100px;
+    font-size: 0.7em;
+  }
+  .orchidFlower {
+    width: 25%;
+  }
+  .littleKawaneko {
+    width: 15%;
+    left: 12%;
+    top: 30%;
+  }
+  .littleJaakuna {
+    width: 15%;
+  }
+  .swiper {
+    width: 65%;
+  }
+  h3 {
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  #studio h2 {
+    background-size: 250px !important;
+  }
+}
+@media screen and (max-width: 640px) {
+  #background-video {
+    display: none;
+  }
+  .banner {
+    min-height: 0;
+    height: 425px;
+  }
+  .banner .logo {
+    top: 185px;
+    left: 110px;
+    animation: none;
+  }
+}
 main {
   overflow: hidden;
 }
